@@ -9,9 +9,7 @@ export default function ContactPage() {
 
       <div className="max-w-xl">
         <p className="text-foreground leading-relaxed mb-8">
-          I&apos;m always interested in hearing about new opportunities in sales, business
-          development, and customer success. Feel free to reach out if you&apos;d like to
-          connect.
+          I&apos;m currently looking for a customer success, BD, or partnerships role, ideally in Singapore. If something here resonated with you, or if you think there might be a fit at your company, please reach out. I'd love to hear from you.
         </p>
 
         <div className="space-y-4">

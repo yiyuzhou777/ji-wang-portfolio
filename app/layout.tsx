@@ -16,8 +16,8 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: 'Ji Wang | Sales, Business Development & Customer Success',
-  description: 'Personal portfolio of Ji Wang - Sales, Business Development, and Customer Success professional',
+  title: 'Ji Wang | Customer Success, BD & Partnerships',
+  description: 'A salesperson who also makes things. Currently looking for a customer success, BD, or partnerships role, ideally in Singapore.',
   generator: 'v0.app',
   icons: {
     icon: [

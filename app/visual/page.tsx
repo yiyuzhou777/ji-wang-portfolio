@@ -1,12 +1,12 @@
 import Image from 'next/image'
 
 const drawings = [
-  { src: '/drawing 1.JPG', alt: 'Drawing 1' },
-  { src: '/drawing 2.JPG', alt: 'Drawing 2' },
-  { src: '/drawing 3.JPG', alt: 'Drawing 3' },
-  { src: '/drawing 4.JPG', alt: 'Drawing 4' },
-  { src: '/drawing 5.JPG', alt: 'Drawing 5' },
-  { src: '/drawing 6.JPG', alt: 'Drawing 6' },
+  { src: '/drawing 2.JPG', alt: 'Drawing 1' },
+  { src: '/drawing 3.JPG', alt: 'Drawing 2' },
+  { src: '/drawing 0.JPG', alt: 'Drawing 3' },
+  { src: '/drawing 6.JPG', alt: 'Drawing 4' },
+  { src: '/drawing 4.JPG', alt: 'Drawing 5' },
+  { src: '/drawing 5.JPG', alt: 'Drawing 6' },
 ]
 
 export default function VisualPage() {
