@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { useState } from 'react'
 
 const navItems = [
   { href: '/selling', label: 'Selling Exploration' },
@@ -50,10 +51,15 @@ export function Header() {
 
 function MobileNav() {
   const pathname = usePathname()
+  const [isOpen, setIsOpen] = useState(false)
   
   return (
-    <details className="relative">
-      <summary className="list-none cursor-pointer p-2">
+    <div className="relative">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="p-2"
+        aria-label="Toggle menu"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -69,20 +75,23 @@ function MobileNav() {
           <line x1="3" y1="12" x2="21" y2="12" />
           <line x1="3" y1="18" x2="21" y2="18" />
         </svg>
-      </summary>
-      <div className="absolute right-0 top-full mt-2 bg-card border border-border rounded-lg shadow-lg py-2 min-w-[200px]">
-        {navItems.map((item) => (
-          <Link
-            key={item.href}
-            href={item.href}
-            className={`block px-4 py-2 hover:bg-secondary transition-colors ${
-              pathname === item.href ? 'text-primary' : 'text-foreground'
-            }`}
-          >
-            {item.label}
-          </Link>
-        ))}
-      </div>
-    </details>
+      </button>
+      {isOpen && (
+        <div className="absolute right-0 top-full mt-2 bg-card border border-border rounded-lg shadow-lg py-2 min-w-[200px]">
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              onClick={() => setIsOpen(false)}
+              className={`block px-4 py-2 hover:bg-secondary transition-colors ${
+                pathname === item.href ? 'text-primary' : 'text-foreground'
+              }`}
+            >
+              {item.label}
+            </Link>
+          ))}
+        </div>
+      )}
+    </div>
   )
 }
